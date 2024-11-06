@@ -340,7 +340,6 @@ function VisualEditor( {
 
 	useEffect( () => {
 		if ( hasNavigationBlock ) {
-			// Apply logic to set editor height to full if navigation block is present.
 			setforceFullHeight( true );
 		}
 	}, [ hasNavigationBlock ] );
