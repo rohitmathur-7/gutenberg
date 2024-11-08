@@ -32,7 +32,12 @@
 		"__experimentalBorder": {
 			"color": true,
 			"width": true,
-			"style": true
+			"style": true,
+			"radius": true,
+			"__experimentalDefaultControls": {
+				"width": true,
+				"radius": true
+			}
 		},
 		"html": false,
 		"spacing": {
