@@ -16,14 +16,11 @@ import { useSelect } from '@wordpress/data';
  */
 import InserterSearchResults from './search-results';
 import useInsertionPoint from './hooks/use-insertion-point';
-// import usePatternsState from './hooks/use-patterns-state';
 import useBlockTypesState from './hooks/use-block-types-state';
 import { store as blockEditorStore } from '../../store';
 
 const SEARCH_THRESHOLD = 6;
 const SHOWN_BLOCK_TYPES = 6;
-// const SHOWN_BLOCK_PATTERNS = 2;
-// const SHOWN_BLOCK_PATTERNS_WITH_PRIORITIZATION = 4;
 
 export default function QuickInserter( {
 	onSelect,
@@ -47,12 +44,6 @@ export default function QuickInserter( {
 		onInsertBlocks,
 		true
 	);
-	// const [ patterns ] = usePatternsState(
-	// 	onInsertBlocks,
-	// 	destinationRootClientId,
-	// 	undefined,
-	// 	true
-	// );
 
 	const { setInserterIsOpened, insertionIndex } = useSelect(
 		( select ) => {
@@ -70,8 +61,6 @@ export default function QuickInserter( {
 		[ clientId ]
 	);
 
-	// const showPatterns =
-	// 	patterns.length && ( !! filterValue || prioritizePatterns );
 	const showSearch = hasSearch && blockTypes.length > SEARCH_THRESHOLD;
 
 	useEffect( () => {
@@ -90,13 +79,6 @@ export default function QuickInserter( {
 			insertionIndex,
 		} );
 	};
-
-	// let maxBlockPatterns = 0;
-	// if ( showPatterns ) {
-	// 	maxBlockPatterns = prioritizePatterns
-	// 		? SHOWN_BLOCK_PATTERNS_WITH_PRIORITIZATION
-	// 		: SHOWN_BLOCK_PATTERNS;
-	// }
 
 	return (
 		<div
