@@ -27,7 +27,6 @@ export default function QuickInserter( {
 	rootClientId,
 	clientId,
 	isAppender,
-	prioritizePatterns,
 	selectBlockOnInsert,
 	hasSearch = true,
 } ) {
@@ -110,7 +109,6 @@ export default function QuickInserter( {
 					maxBlockPatterns={ 0 }
 					maxBlockTypes={ SHOWN_BLOCK_TYPES }
 					isDraggable={ false }
-					prioritizePatterns={ prioritizePatterns }
 					selectBlockOnInsert={ selectBlockOnInsert }
 					isQuick
 				/>
